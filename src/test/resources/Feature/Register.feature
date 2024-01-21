@@ -12,3 +12,9 @@ Feature: Tothe test the functionality of Register link
       | username   | password  | confirm_password |
       | David0987  | Scott@564 | Scott@564        |
       | Davidscott | Test@BDD  | Test@BDD         |
+
+  Scenario: Test signin
+    Given User is in the signin page
+    When user enters <v_username> and <v_password>
+      | Testadmin | Ninja@567 |
+    Then user clicks on sigin
