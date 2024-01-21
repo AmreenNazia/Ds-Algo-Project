@@ -12,7 +12,7 @@ public class ConfigReader {
 	public Properties init_prop() throws IOException {
 		
 		prop  = new Properties();
-    is = new FileInputStream((System.getProperty("user.dir")+"/src/test/resources/ConfigFiles/config.properties"));
+    fis = new FileInputStream((System.getProperty("user.dir")+"/src/test/resources/ConfigFiles/config.properties"));
 		prop.load(fis);
 		 return prop;
 		}
