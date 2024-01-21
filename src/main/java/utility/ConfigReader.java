@@ -12,7 +12,7 @@ public class ConfigReader {
 	public Properties init_prop() throws IOException {
 		
 		prop  = new Properties();
-		FileInputStream fis = new FileInputStream("/Users/amreennaziasyed/eclipse-workspace/Ds-Algo/src/test/resources/ConfigFiles/config.properties");
+		FileInputStream fis = new FileInputStream("C:\\Users\\Rekha_Drithisa\\git\\ds-algo\\src\\test\\resources\\ConfigFiles\\config.properties");
 		prop.load(fis);
 		return prop;
 		
