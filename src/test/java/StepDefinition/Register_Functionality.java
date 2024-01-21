@@ -10,7 +10,8 @@ public class Register_Functionality   {
 	 
 	 
 	@Given("Browser is open")
-	public   void browser_is_open() {
+	public   void browser_is_open() 
+	{
 
 		 BaseTest.getDriver().get("https://dsportalapp.herokuapp.com/");
 		 

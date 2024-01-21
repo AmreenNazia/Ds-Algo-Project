@@ -10,7 +10,7 @@ public  class RegisterPage   {
 
 	private WebDriver driver;
 
-	private  By Getstarted_btn = By.xpath("//a[@href='/home']");
+	private  By Getstarted_btn = By.xpath("//button[text()='Get Started']");
 	private By Register_link = By.xpath(" //a[@href='/register']");
 	private By Register_Usrname = By.id("id_username");
 	private By Register_pwd = By.id("id_password1");

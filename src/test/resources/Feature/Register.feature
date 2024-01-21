@@ -10,5 +10,9 @@ Feature: Tothe test the functionality of Register link
 
     Examples: 
       | username   | password  | confirm_password |
-      | Numpy123   | Test123   | Test126          |
+       | Numpy123   | Test123   | Test126          |
      
+ 
+       
+  
+ 

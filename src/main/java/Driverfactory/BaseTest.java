@@ -10,7 +10,6 @@ import org.openqa.selenium.safari.SafariDriver;
 
  
 import io.github.bonigarcia.wdm.WebDriverManager;
-import utility.ConfigReader;
 
 public class BaseTest  {
 
