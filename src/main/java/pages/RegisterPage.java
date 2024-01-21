@@ -41,15 +41,15 @@ public  class RegisterPage   {
 
 		driver.findElement(Register_confirm_pwd).sendKeys(confirm_password);
 	}
-	public boolean clickRegister() {
+	public void clickRegister() {
 
 		driver.findElement(Register_btn).click();
-		return driver.findElement(alert_message).isDisplayed();
+		System.out.println(driver.findElement(alert_message).getText());
 
 	}
 
-	public boolean alertmessage() {
-		return driver.findElement(alert_message).isDisplayed();
+	public void alertmessage() {
+		System.out.println(driver.findElement(alert_message).getText());
 
 	}
 }
