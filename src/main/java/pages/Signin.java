@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class Signin {
 	
@@ -26,6 +27,22 @@ public class Signin {
 	public WebDriver login()
 	{
 		driver.findElement(login_button).click();
+		return driver;
+	}
+	public WebDriver alert()
+	{
+		String exp = "Invalid Username and Password";
+		WebElement m = driver.findElement(By.xpath("//div[@role='alert']"));
+		String err_msg = m.getText();
+	      System.out.println("Error message is: "+err_msg);
+	      if(err_msg.equalsIgnoreCase(exp))
+	      {
+	    	  System.out.println("Verification success");
+	      }
+	      else
+	      {
+	    	  System.out.println("Verification failed");
+	      }
 		return driver;
 	}
 
