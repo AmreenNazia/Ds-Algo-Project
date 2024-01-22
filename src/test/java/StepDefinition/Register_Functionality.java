@@ -53,7 +53,7 @@ public class Register_Functionality   {
 	public void user_should_get_registered_successfully_alert() throws InterruptedException {
 		Thread.sleep(3000); 
 		register.alertmessage();
-
+	}
 	@Then("user registeration is unsuccessfull and with error mismatch message")
 	public void user_registeration_is_unsuccessfull_and_with_error_mismatch_message() throws InterruptedException {
 		Thread.sleep(3000); 
