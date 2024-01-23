@@ -52,5 +52,19 @@ public  class RegisterPage   {
 		System.out.println(driver.findElement(alert_message).getText());
 
 	}
+	public void error_message()
+	{
+		String exp1 = "password_mismatch:The two password fields didn’t match.";
+		WebElement m = driver.findElement(By.xpath("//div[@role='alert']"));
+		String error_msg = m.getText();
+	      System.out.println("Error message is: "+error_msg);
+	      if(error_msg.equalsIgnoreCase(exp1))
+	      {
+	    	  System.out.println("Verification success");
+	      }
+	      else
+	      {
+	    	  System.out.println("Verification failed");
+	      }
 }
 
