@@ -12,11 +12,4 @@ Feature: Tothe test the functionality of Register link
     Examples: 
       | username   | password  | confirm_password |
       | Davidscott | Test@BDD  | Test@BDD         |
-      
- 
-       
-     
- 
-       
-  
  
