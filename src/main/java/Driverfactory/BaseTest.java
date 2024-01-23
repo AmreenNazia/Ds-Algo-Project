@@ -23,10 +23,7 @@ public class BaseTest  {
 	if(browser.equalsIgnoreCase("chrome"))
 	{
 		WebDriverManager.chromedriver().setup();
-		tlDriver.set(new ChromeDriver());
-		 
-		 
-		 
+		tlDriver.set(new ChromeDriver()); 
 	}
 	else if(browser.equalsIgnoreCase("firefox"))
 	{
@@ -46,7 +43,9 @@ public class BaseTest  {
 	 
 	getDriver().manage().deleteAllCookies();
 	getDriver().manage().window().maximize();
+	
 	return getDriver();
+	
  
 	}
 	public static synchronized WebDriver getDriver() {

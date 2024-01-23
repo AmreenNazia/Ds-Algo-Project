@@ -11,6 +11,7 @@ import io.cucumber.java.en.*;
 import pages.RegisterPage;
 import pages.Signin;
 
+
 public class Signin_Functionality extends BaseTest{
 
 	private WebDriver driver = getDriver();
@@ -18,8 +19,9 @@ public class Signin_Functionality extends BaseTest{
 	private Signin si = new Signin(BaseTest.getDriver());
 
 	@Given("User is in the signin page")
-	public void user_is_in_the_signin_page() throws InterruptedException 
+	public void user_is_in_the_signin_page() throws InterruptedException
 	{
+		
 		BaseTest.getDriver().get("https://dsportalapp.herokuapp.com/");
 		Thread.sleep(5000);
 		register.Getstarted();
