@@ -49,12 +49,12 @@ public class Register_Functionality   {
 		register.clickRegister();
 
 	}
-
 	@Then("user should get registered successfully alert")
 	public void user_should_get_registered_successfully_alert() throws InterruptedException {
 		Thread.sleep(3000); 
 		register.alertmessage();
 	}
+	 
 
  
  
