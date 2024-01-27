@@ -33,8 +33,10 @@ public class ApplicationHooks {
 	@Before(order = 1)
 	public void launchBrowser() {
 		String browsername = prop.getProperty("browser");
+		String url = prop.getProperty("testurl");
 		basetest = new BaseTest();
 		driver = basetest.init_driver(browsername);
+		driver.navigate().to(url);
 	}
 	@After(order = 0)
 	public void quitBrowser() {
