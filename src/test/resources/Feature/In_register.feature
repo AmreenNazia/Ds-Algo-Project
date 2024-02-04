@@ -1,12 +1,12 @@
+@tag2
 Feature: Test register is unsuccessful with invalid credentials
 
   Scenario Outline: Test the register with invalid credentials
-    Given Open the browser
-    And I click on getstarted and navigates to reigster page
-    And I click on Register
-    When I enters username as "<username>" and as "<password>" and as "<confirm_password>"
-    And I click reigster button
-    Then my registeration is unsuccessfull and with error mismatch message
+    Given  user is in Register page
+    And user clicks on Register
+    When user enters <username> and <password> and <confirm_password>
+    And click reigster button
+    Then user should get mismatch password message
 
     Examples: 
       | username | password | confirm_password |

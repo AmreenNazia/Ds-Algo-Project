@@ -18,6 +18,7 @@ public  class RegisterPage   {
 	private By Register_confirm_pwd = By.id("id_password2");
 	private By Register_btn = By.xpath("//input[@type='submit']");
 	private By alert_message = By.xpath("//div[@role='alert']");
+	private By home = By.xpath("//a[@href='/home']");
 
 	public RegisterPage(WebDriver driver) {
 		this.driver = driver;
@@ -43,16 +44,25 @@ public  class RegisterPage   {
 		driver.findElement(Register_confirm_pwd).sendKeys(confirm_password);
 	}
 	public void clickRegister() {
-
+		
 		driver.findElement(Register_btn).click();
-		System.out.println(driver.findElement(alert_message).getText());
-
+		
 	}
+	
 
-	public void alertmessage() {
-		System.out.println(driver.findElement(alert_message).getText());
-
-	}
+	public void Alertmessage() throws InterruptedException {
+		
+		String text = "password_mismatch:The two password fields didn’t match.";
+		String errmsg = driver.findElement(alert_message).getText();
+		if(text == errmsg) {
+			System.out.println("Registered unsuccessful");
+		}
+		else {
+			driver.findElement(home).click();
+			System.out.println("Registered Successfully");
+		}
+			
+		}
 	public void error_message()
 	{
 		String exp1 = "password_mismatch:The two password fields didn’t match.";

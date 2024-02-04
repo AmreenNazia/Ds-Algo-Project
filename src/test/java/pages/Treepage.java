@@ -41,7 +41,7 @@ public class Treepage {
 		private By Binary_Search_Trees = By.xpath("//a[@href='binary-search-trees']");
 		private By Implementation_of_bst = By.xpath("//a[@href='implementation-of-bst']");
 		private By sign_out = By.xpath("//a[@href='/logout']"); 
-
+		private By practice_question = By.xpath("//a[@href='/tree/practice']");
 
 		public Treepage(WebDriver driver) {
 			this.driver = driver;
@@ -75,56 +75,84 @@ public class Treepage {
 		public void click_0n_OverviewofTree() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(click_OvrwOfTrees).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 		public void click_Terminologies() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Terminologies).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 		public void click_TypesOfTrees() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Types_of_trees).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
+			
 		}
 		public void click_Tree_Traversals() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(TreeTraversals).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 		public void click_Traversals_illustration() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Travesals_illustration).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 		public void click_Binary_trees() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Binary_Tree).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 		public void click_TypesOfBinaryTrees() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Types_of_BinaryTrees).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 		public void click_ImplementationInPython() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Implementation_in_python).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 		public void click_BinaryTreeTraversals() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Binary_tree_traversals).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
+			
 		}
 		public void click_ImplementationOfBinaryTrees() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Implementation_of_Binary_Trees).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 
 		public void click_ApplicationOfBInaryTree() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Applicaations_of_Binary_trees).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 		public void click_BinarySearchTrees() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Binary_Search_Trees).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 
 		public void click_ImplementationOfBST() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(Implementation_of_bst).click();
+			driver.findElement(practice_question).click();
+			driver.navigate().back();
 		}
 
 		public void click_on_Tryhere() {
@@ -136,8 +164,9 @@ public class Treepage {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(click_Textarea).click();
 		}
-		public void fillTextArea(String text)   {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));  
+		public void fillTextArea(String text) throws InterruptedException   {
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60)); 
+			Thread.sleep(3000);
 			driver.findElement(click_Textarea).sendKeys(text);
 
 		}
@@ -147,6 +176,7 @@ public class Treepage {
 			 
 		}
 		public void output() {
+			 String message;
 			try {
 		        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 		        wait.until(ExpectedConditions.alertIsPresent());
@@ -154,7 +184,8 @@ public class Treepage {
 		        System.out.println(driver.switchTo().alert().getText());
 		        alert.accept();
 		    } catch (Exception e) {
-		        System.out.println(driver.findElement(output_message).getText());
+		         message = driver.findElement(output_message).getText();
+		         System.out.println("The output is :" +message);
 		    }
 			 
 			 

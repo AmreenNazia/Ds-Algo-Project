@@ -47,7 +47,7 @@ public class TreeFunctionality {
 	}
 
 	@When("user fills the Text area with SheetName {string} and Rownumber {int}")
-	public void user_fills_the_text_area_with_sheet_name_and_rownumber(String SheetName, Integer Rownumber) throws InvalidFormatException, IOException {
+	public void user_fills_the_text_area_with_sheet_name_and_rownumber(String SheetName, Integer Rownumber) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
 		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), SheetName);
 		testdata.get(Rownumber).get("TestCode");
@@ -72,7 +72,7 @@ public class TreeFunctionality {
 	}
 
 	@When("user sends Text area with Sheetname {string} and RowNumber {int}")
-	public void user_sends_text_area_with_sheetname_and_row_number(String Sheetname, Integer RowNumber) throws InvalidFormatException, IOException {
+	public void user_sends_text_area_with_sheetname_and_row_number(String Sheetname, Integer RowNumber) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
 		List<Map<String,String>>testdata =reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), Sheetname);
 		testdata.get(RowNumber).get("TestCode");
@@ -86,7 +86,7 @@ public class TreeFunctionality {
 	}
 
 	@When("user fills the with SheetName {string} and RowNUmber {int}")
-	public void user_fills_the_with_sheet_name_and_row_n_umber(String SheetName, Integer RowNUmber) throws InvalidFormatException, IOException {
+	public void user_fills_the_with_sheet_name_and_row_n_umber(String SheetName, Integer RowNUmber) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
 		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), SheetName);
 		testdata.get(RowNUmber).get("TestCode");
@@ -100,7 +100,7 @@ public class TreeFunctionality {
 	}
 
 	@When("user fills the Text area with sheetname {string} and RowNumber {int}")
-	public void user_fills_the_text_area_with_sheetname_and_row_number(String sheetname, Integer RowNumber) throws InvalidFormatException, IOException {
+	public void user_fills_the_text_area_with_sheetname_and_row_number(String sheetname, Integer RowNumber) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
 		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), sheetname);
 		testdata.get(RowNumber).get("TestCode");
@@ -114,7 +114,7 @@ public class TreeFunctionality {
 	}
 
 	@When("user fills the Text area with Sheet_names {string} and RowNumber {int}")
-	public void user_fills_the_text_area_with_sheet_names_and_row_number(String Sheet_names, Integer RowNumber) throws InvalidFormatException, IOException {
+	public void user_fills_the_text_area_with_sheet_names_and_row_number(String Sheet_names, Integer RowNumber) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
 		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), Sheet_names);
 		testdata.get(RowNumber).get("TestCode");
@@ -128,7 +128,7 @@ public class TreeFunctionality {
 	}
 
 	@When("user fills the Text area with SheetNAME {string} and RowNumber {int}")
-	public void user_fills_the_text_area_with_sheet_name_and_row_number(String SheetNAME, Integer RowNumber) throws InvalidFormatException, IOException {
+	public void user_fills_the_text_area_with_sheet_name_and_row_number(String SheetNAME, Integer RowNumber) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
 		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), SheetNAME);
 		testdata.get(RowNumber).get("TestCode");

@@ -1,3 +1,4 @@
+@tag3
 Feature: Checks the signin function
 
   Scenario: Test signin
