@@ -1,11 +1,12 @@
 package AppHooks;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+ 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import java.io.File;
-import java.io.FileInputStream;
+
+
+ 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,7 +21,7 @@ import org.openqa.selenium.WebDriver;
 import Driverfactory.BaseTest;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.BeforeAll;
+ 
 import io.cucumber.java.Scenario;
  
 import utility.ConfigReader;
@@ -35,6 +36,8 @@ public class ApplicationHooks {
 	 
 	 
 	 
+	 
+	@BeforeMethod
 	@Before(order = 0)
 	public void get_property() throws IOException {
 		configReader = new ConfigReader();
@@ -46,6 +49,8 @@ public class ApplicationHooks {
 	 
 	 
 	 
+	 
+	@BeforeMethod
 	@Before(order = 1)
 	public void launchBrowser() throws Throwable {
 		String browser =  prop.getProperty("browser");
@@ -56,12 +61,16 @@ public class ApplicationHooks {
 	}
 	
 	 
+	 
+	@AfterMethod
 	@After(order = 0)
 	public void quitBrowser() {
 		driver.quit();
 	}
 	 
 	 
+	 
+	@AfterMethod
 	@After(order = 1)
 	public void tearDown(Scenario scenario) throws IOException {
 		if(scenario.isFailed()) {
