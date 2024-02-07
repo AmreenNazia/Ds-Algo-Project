@@ -16,7 +16,7 @@ public class TreeFunctionality {
 	private Treepage tree = new Treepage(BaseTest.getDriver());
 	
 	@Given("user navigates to login page")
-	public void user_navigates_to_login_page() {
+	public void user_navigates_to_login_page() throws InterruptedException {
 	   tree.Getstarted();
 	   tree.signin();
 	}

@@ -54,7 +54,7 @@ public class QueueFunctionality {
 	@When("user has to fills the Text area with SheetName {string} and RowNumber {int}")
 	public void user_has_to_fills_the_text_area_with_sheet_name_and_row_number(String SheetName, Integer RowNumber) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
-		List<Map<String,String>>testdata = reader.getData("/Users/amreennaziasyed/eclipse-workspace/DSALGO/ds-algo/src/test/java/utility/python.xlsx", SheetName);
+		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), SheetName);
 		testdata.get(RowNumber).get("TestCode");
 		String text = testdata.get(RowNumber).get("TestCode");
 		 System.out.println(text);
@@ -79,7 +79,7 @@ public class QueueFunctionality {
 	@When("user fill Text area with Sheet_Name {string} and RowNumber {int}")
 	public void user_fill_text_area_with_sheet_name_and_row_number(String Sheet_Name, Integer RowNumber) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
-		List<Map<String,String>>testdata = reader.getData("/Users/amreennaziasyed/eclipse-workspace/DSALGO/ds-algo/src/test/java/utility/python.xlsx", Sheet_Name);
+		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), Sheet_Name);
 		testdata.get(RowNumber).get("TestCode");
 		String text = testdata.get(RowNumber).get("TestCode");
 		 System.out.println(text);
@@ -94,7 +94,7 @@ public class QueueFunctionality {
 	@When("user fills the Text area using SheetName {string} and Row_Number {int}")
 	public void user_fills_the_text_area_using_sheet_name_and_row_number(String SheetName, Integer Row_Number) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
-		List<Map<String,String>>testdata = reader.getData("/Users/amreennaziasyed/eclipse-workspace/DSALGO/ds-algo/src/test/java/utility/python.xlsx", SheetName);
+		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), SheetName);
 		testdata.get(Row_Number).get("TestCode");
 		String text = testdata.get(Row_Number).get("TestCode");
 		 System.out.println(text);
@@ -108,7 +108,7 @@ public class QueueFunctionality {
 	@When("user fill the Text area with using Sheet_Name {string} and Row_Number {int}")
 	public void user_fill_the_text_area_with_using_sheet_name_and_row_number(String Sheet_Name, Integer Row_Number) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
-		List<Map<String,String>>testdata = reader.getData("/Users/amreennaziasyed/eclipse-workspace/DSALGO/ds-algo/src/test/java/utility/python.xlsx", Sheet_Name);
+		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), Sheet_Name);
 		testdata.get(Row_Number).get("TestCode");
 		String text = testdata.get(Row_Number).get("TestCode");
 		 System.out.println(text);

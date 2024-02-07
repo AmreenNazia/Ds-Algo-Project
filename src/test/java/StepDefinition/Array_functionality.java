@@ -54,7 +54,7 @@ public void user_clicks_on_search_the_array_link_and_enters_the_python_code_with
 	if(SheetName.equals("Python Array"))
 	{
 		Thread.sleep(1000); 
-		List<Map<String,String>>testData = er.getData("/Users/amreennaziasyed/eclipse-workspace/DSALGO/ds-algo/src/test/java/utility/python1.xlsx", SheetName);	
+		List<Map<String,String>>testData = er.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), SheetName);
 		 
 		for(int i = 0 ; i < testData.size() ; i++)
 		{
@@ -73,7 +73,7 @@ public void user_clicks_on_run_button_and_checks_the_output_and_clicks_submit() 
 	arr.practice_run();
 	Thread.sleep(1000);
 	arr.practice_submit();
-	Thread.sleep(1000);
+//	Thread.sleep(2000);
 	arr.signout();
 }
 
@@ -83,7 +83,7 @@ public void user_clicks_on_max_consecutive_ones_and_enters_the_python_code_with_
 	if(SheetName.equals("Python Array"))
 	{
 		 
-		List<Map<String,String>>testData = er.getData("/Users/amreennaziasyed/eclipse-workspace/DSALGO/ds-algo/src/test/java/utility/python1.xlsx", SheetName);	
+		List<Map<String,String>>testData = er.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), SheetName);	
 		Thread.sleep(1000);
 		for(int i = 0 ; i < testData.size() ; i++)
 		{
@@ -101,7 +101,7 @@ public void user_clicks_on_even_number_of_digits_and_enters_the_python_code_with
 	if(SheetName.equals("Python Array"))
 	{
 		 
-		List<Map<String,String>>testData = er.getData("/Users/amreennaziasyed/eclipse-workspace/DSALGO/ds-algo/src/test/java/utility/python1.xlsx", SheetName);	
+		List<Map<String,String>>testData = er.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), SheetName);
 		Thread.sleep(1000);
 		for(int i = 0 ; i < testData.size() ; i++)
 		{
@@ -119,7 +119,7 @@ public void user_clicks_on_squares_of_sorted_array_and_user_enters_the_python_co
 	if(SheetName.equals("Python Array"))
 	{
 		 
-		List<Map<String,String>>testData = er.getData("/Users/amreennaziasyed/eclipse-workspace/DSALGO/ds-algo/src/test/java/utility/python1.xlsx", SheetName);	
+		List<Map<String,String>>testData = er.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx") , SheetName);	
 		Thread.sleep(1000);
 		for(int i = 0 ; i < testData.size() ; i++)
 		{
@@ -139,7 +139,7 @@ public void the_user_clicks_on_try_here_button() {
 @When("user is in texteditor and user enters the python code with {string} and RowNumber {int}")
 public void user_is_in_texteditor_and_user_enters_the_python_code_with_and_row_number(String SheetName, Integer RowNumber) throws InvalidFormatException, IOException, InterruptedException {
 	 
-	List<Map<String,String>>testData = er.getData("/Users/amreennaziasyed/eclipse-workspace/DSALGO/ds-algo/src/test/java/utility/python1.xlsx", SheetName);	
+	List<Map<String,String>>testData = er.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), SheetName);	
 	String text = testData.get(RowNumber).get("Code");
 	Thread.sleep(4000);
 	arr.text_editor(text);

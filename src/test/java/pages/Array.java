@@ -1,9 +1,10 @@
 package pages;
 
 import java.time.Duration;
+
 import java.util.ArrayList;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -13,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class Array 
 {
@@ -137,13 +139,12 @@ public class Array
 		driver.findElement(search_array).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		Actions action = new Actions(driver);
-		WebElement text_area = driver.findElement(By.xpath("//*[@id=\"answer_form\"]/div/div/div[1]/textarea"));
-		
-		action.moveToElement(text_area).click();
-		
-		text_area.sendKeys(Keys.COMMAND + "a");
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		 
+		WebElement text_area = driver.findElement(By.xpath("//*[@id=\"answer_form\"]/div/div/div[1]/textarea"));
+
+		action.moveToElement(text_area).click();
+		text_area.sendKeys(Keys.COMMAND + "a");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		text_area.sendKeys(Keys.DELETE);
 		for (String s : list)
 		{
@@ -207,8 +208,9 @@ public class Array
 		driver.findElement(max_consecutive).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 		Actions action = new Actions(driver);
+		 
+		 
 		WebElement text_area = driver.findElement(By.xpath("//*[@id=\"answer_form\"]/div/div/div[1]/textarea"));
-
 		action.moveToElement(text_area).click();
 		text_area.sendKeys(Keys.COMMAND + "a");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -228,6 +230,8 @@ public class Array
 		driver.findElement(find_even_digits).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 		Actions action = new Actions(driver);
+		 
+		 
 		WebElement text_area = driver.findElement(By.xpath("//*[@id=\"answer_form\"]/div/div/div[1]/textarea"));
 		action.moveToElement(text_area).click();
 		text_area.sendKeys(Keys.COMMAND + "a");
@@ -240,7 +244,7 @@ public class Array
 
 		}	
 		Array a = new Array(driver);
-		a.TextIndentation(driver, text_area, 6, 6, true);		
+		a.TextIndentation(driver, text_area, 6, 6, true);
 	}
 	public void squares_of_sorted_array(ArrayList<String> list) throws InterruptedException
 	{
@@ -249,10 +253,11 @@ public class Array
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 	 
 		Actions action = new Actions(driver);
-		WebElement text_area = driver.findElement(By.xpath("//*[@id=\"answer_form\"]/div/div/div[1]/textarea"));
 		 
+		 
+		WebElement text_area = driver.findElement(By.xpath("//*[@id=\"answer_form\"]/div/div/div[1]/textarea"));
 		action.moveToElement(text_area).click();
-		 text_area.sendKeys(Keys.COMMAND + "a");
+		text_area.sendKeys(Keys.COMMAND + "a");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		text_area.sendKeys(Keys.DELETE);
 		for (String s : list)
@@ -262,9 +267,7 @@ public class Array
 
 		}	
 		Array a = new Array(driver);
-		
 		a.TextIndentation(driver, text_area, 6, 6, true);
-
 	}
 	public void signout()
 	{

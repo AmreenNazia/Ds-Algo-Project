@@ -70,7 +70,7 @@ public class Linkedlist_functionality extends BaseTest {
 	@When("user fills the Text area with Sheetname {string} and Rownumber {int}")
 	public void user_fills_the_text_area_with_sheetname_and_rownumber(String Sheetname, Integer Rownumber) throws InvalidFormatException, IOException, InterruptedException {
 		 
-		List<Map<String,String>>testData = reader.getData("/Users/amreennaziasyed/eclipse-workspace/DSALGO/ds-algo/src/test/java/utility/python1.xlsx", Sheetname);	
+		List<Map<String,String>>testData = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), Sheetname);	
 		String text = testData.get(Rownumber).get("Code");
 		Thread.sleep(3000);
 		ll.linkedlist_text_editor(text);

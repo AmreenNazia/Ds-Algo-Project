@@ -39,11 +39,7 @@ public WebDriver driver;
 		   }
 
 		
-		  
-		  
-		  
-		  
-		  public void startpage() {
+		 public void startpage() {
 			
 			driver.findElement(GetStartedbutton).click();	
 				
