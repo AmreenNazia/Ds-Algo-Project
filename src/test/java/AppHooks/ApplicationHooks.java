@@ -54,7 +54,7 @@ public class ApplicationHooks {
 	@BeforeMethod
 	@Before(order = 1)
 	public void launchBrowser() throws Throwable {
-		String browser = ConfigReader.getBrowserType();
+		String browser = prop.getProperty("browser");
 		String url = prop.getProperty("testurl");
 		basetest = new BaseTest();
 		driver = basetest.init_driver(browser);
