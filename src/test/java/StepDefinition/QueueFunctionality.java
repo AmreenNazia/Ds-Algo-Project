@@ -57,7 +57,7 @@ public class QueueFunctionality {
 		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), SheetName);
 		testdata.get(RowNumber).get("TestCode");
 		String text = testdata.get(RowNumber).get("TestCode");
-		 System.out.println(text);
+		  
 		  qp.fillcode(text);
 	}
 
@@ -82,8 +82,7 @@ public class QueueFunctionality {
 		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), Sheet_Name);
 		testdata.get(RowNumber).get("TestCode");
 		String text = testdata.get(RowNumber).get("TestCode");
-		 System.out.println(text);
-		  qp.fillcode(text);
+		 qp.fillcode(text);
 	}
 
 	@Then("user click the implimentation using array")
@@ -97,7 +96,7 @@ public class QueueFunctionality {
 		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), SheetName);
 		testdata.get(Row_Number).get("TestCode");
 		String text = testdata.get(Row_Number).get("TestCode");
-		 System.out.println(text);
+		 
 		  qp.fillcode(text);
 	}
 
@@ -108,10 +107,10 @@ public class QueueFunctionality {
 	@When("user fill the Text area with using Sheet_Name {string} and Row_Number {int}")
 	public void user_fill_the_text_area_with_using_sheet_name_and_row_number(String Sheet_Name, Integer Row_Number) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
-		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), Sheet_Name);
+		List<Map<String,String>>testdata = reader.getData((System.getProperty("user.dir")+"/src/test/java/utility/python.xlsx"), Sheet_Name);
 		testdata.get(Row_Number).get("TestCode");
 		String text = testdata.get(Row_Number).get("TestCode");
-		 System.out.println(text);
+		 
 		  qp.fillcode(text);
 	}
 
