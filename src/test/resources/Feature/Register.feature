@@ -1,7 +1,7 @@
-@tag1
+ 
 Feature: To test the functionality of Register link
 
-@valid
+ 
   Scenario Outline: Check Register is successful with valid Credentials
     Given  user is in Register page
     And user clicks on Register
@@ -11,5 +11,5 @@ Feature: To test the functionality of Register link
     
     Examples: 
       | username   | password  | confirm_password |
-      | Davidscott | Test@BDD  | Test@BDD         |
+      | Connie | Ninja@890  | Ninja@890        |
  

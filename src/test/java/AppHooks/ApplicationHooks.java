@@ -2,7 +2,7 @@ package AppHooks;
 
 
 import org.testng.annotations.AfterMethod;
-
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
  
  
@@ -54,7 +54,7 @@ public class ApplicationHooks {
 	@BeforeMethod
 	@Before(order = 1)
 	public void launchBrowser() throws Throwable {
-		String browser = prop.getProperty("browser");
+		String browser = ConfigReader.getBrowserType();
 		String url = prop.getProperty("testurl");
 		basetest = new BaseTest();
 		driver = basetest.init_driver(browser);
@@ -71,7 +71,7 @@ public class ApplicationHooks {
 		driver.quit();
 	}
 
-	@AfterMethod 
+	@AfterTest 
 	@After(order = 1)
 	public void tearDown(Scenario scenario) throws IOException {
 		if(scenario.isFailed()) {

@@ -5,7 +5,7 @@ Feature: Test the functionality of array data structure
     When user enters <username> and <password>
       | Testadmin | Ninja@567 |
     Then user navigates to home page
-@smoke
+ 
   Scenario Outline: search for array data structure
     Given user is in the array page
     When user clicks Arrays in python link

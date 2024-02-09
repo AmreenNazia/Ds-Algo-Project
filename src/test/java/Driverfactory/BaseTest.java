@@ -20,9 +20,8 @@ public class BaseTest  {
 	public WebDriver init_driver(String browser) {
 
 	 
-			if(browser.equalsIgnoreCase("chrome"))
-			{
-
+			if(browser.equalsIgnoreCase("chrome")) {
+				
 				WebDriverManager.chromedriver().setup();
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("headless");
@@ -37,6 +36,7 @@ public class BaseTest  {
 			{
 				WebDriverManager.safaridriver().setup();
 				tlDriver.set(new SafariDriver()); 
+				
 			}
 			else if(browser.equalsIgnoreCase("edge")) {
 				WebDriverManager.edgedriver().setup();
@@ -49,7 +49,7 @@ public class BaseTest  {
 
 			}
 		
-		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		getDriver().manage().window().maximize();
 
 		return getDriver();

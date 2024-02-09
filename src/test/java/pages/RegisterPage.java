@@ -2,8 +2,10 @@ package pages;
 
 import org.openqa.selenium.By;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 
 
@@ -19,7 +21,7 @@ public  class RegisterPage   {
 	private By Register_btn = By.xpath("//input[@type='submit']");
 	private By alert_message = By.xpath("//div[@role='alert']");
 	private By home = By.xpath("//a[@href='/home']");
-
+	String user_name;
 	public RegisterPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -32,7 +34,7 @@ public  class RegisterPage   {
 		driver.findElement(Register_link).click();
 	}
 	public void enterUsername(String username) {
-
+		  user_name = username;
 		driver.findElement(Register_Usrname).sendKeys(username);
 	}
 	public void enterPassword(String password)
@@ -46,23 +48,24 @@ public  class RegisterPage   {
 	public void clickRegister() {
 		
 		driver.findElement(Register_btn).click();
+//		driver.findElement(home).click();
 		
 	}
 	
 
 	public void Alertmessage() throws InterruptedException {
 		
-		String text = "password_mismatch:The two password fields didn’t match.";
-		String errmsg = driver.findElement(alert_message).getText();
-		if(text == errmsg) {
-			System.out.println("Registered unsuccessful");
-		}
-		else {
+		
+ 	
+		String actual = driver.findElement(alert_message).getText();
+		String expected = "New Account Created. You are logged in as "+user_name;
+		 
+		 Assert.assertEquals(actual, expected);
 			driver.findElement(home).click();
 			System.out.println("Registered Successfully");
 		}
-			
-		}
+ 		
+		
 	public void error_message()
 	{
 		String exp1 = "password_mismatch:The two password fields didn’t match.";

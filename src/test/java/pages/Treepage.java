@@ -3,6 +3,7 @@ package pages;
 import java.time.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,7 +15,7 @@ public class Treepage {
 	
 
 	
-		private WebDriver driver;
+		private  WebDriver driver;
 
 
 		private By Getstarted_btn = By.xpath("//button[text()='Get Started']");
@@ -49,107 +50,125 @@ public class Treepage {
 
 		 
 		public void Getstarted() {
-
-			driver.findElement(Getstarted_btn).click();
-		}
-		public void signin()
-		{
 			
+			 driver.findElement(Getstarted_btn).click();
+		 
+		}		
+		public void signin() throws InterruptedException
+		{
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 			driver.findElement(signin_link).click();
 
+			 
 		}
+		
 		public void Username_and_password() {
+			
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 			driver.findElement(sign_username).sendKeys("Testadmin");
-			driver.findElement(sign_password).sendKeys("Ninja@567");
+			driver.findElement( sign_password).sendKeys("Ninja@567");
 		}
 
 		public void login()
 		{
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 			driver.findElement(login_button).click();
-
+			 
 		}
 		public void Tree() {
-
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 			driver.findElement(click_Tree).click();
 		}
 		public void click_0n_OverviewofTree() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 			driver.findElement(click_OvrwOfTrees).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 		}
 		public void click_Terminologies() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Terminologies).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 		}
 		public void click_TypesOfTrees() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Types_of_trees).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 			
 		}
 		public void click_Tree_Traversals() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(TreeTraversals).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 		}
 		public void click_Traversals_illustration() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Travesals_illustration).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 		}
 		public void click_Binary_trees() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Binary_Tree).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 		}
 		public void click_TypesOfBinaryTrees() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Types_of_BinaryTrees).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 		}
 		public void click_ImplementationInPython() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Implementation_in_python).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 		}
 		public void click_BinaryTreeTraversals() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Binary_tree_traversals).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 			
 		}
 		public void click_ImplementationOfBinaryTrees() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Implementation_of_Binary_Trees).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 		}
 
 		public void click_ApplicationOfBInaryTree() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Applicaations_of_Binary_trees).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 		}
 		public void click_BinarySearchTrees() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Binary_Search_Trees).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
 		}
 
 		public void click_ImplementationOfBST() {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+			 
 			driver.findElement(Implementation_of_bst).click();
 			driver.findElement(practice_question).click();
 			driver.navigate().back();
@@ -162,6 +181,7 @@ public class Treepage {
 		}
 		public void click_on_Textarea() {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			 
 			driver.findElement(click_Textarea).click();
 		}
 		public void fillTextArea(String text) throws InterruptedException   {
@@ -171,7 +191,7 @@ public class Treepage {
 
 		}
 		public void click_Run() throws InterruptedException  {
-			 
+			  
 			driver.findElement(click_run).click();
 			 
 		}
@@ -191,7 +211,8 @@ public class Treepage {
 			 
 			 }
 		public void signout()
-		{
+		{  
+			 
 			driver.navigate().back();
 			driver.findElement(sign_out).click();
 		}
