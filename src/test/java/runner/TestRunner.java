@@ -10,7 +10,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import utility.ConfigReader;
  
-@CucumberOptions(features="src/test/resources/Feature/Register.feature",glue = {"StepDefinition","AppHooks"},
+@CucumberOptions(features="src/test/resources/Feature/Register.feature",
+		 "src/test/resources/Feature/DataStructure.feature",
+		 glue = {"StepDefinition","AppHooks"},
 monochrome = true,
 plugin = {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
