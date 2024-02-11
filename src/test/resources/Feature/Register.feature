@@ -11,5 +11,5 @@ Feature: To test the functionality of Register link
     
     Examples: 
       | username   | password  | confirm_password |
-      | Connie | Ninja@890  | Ninja@890        |
+      | Connie_012 | Ninja@89  | Ninja@89        |
  
