@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 import utility.ConfigReader;
  
 @CucumberOptions(features={"src/test/resources/Feature/Array.feature",
-			  "src/test/resources/Feature/DataStructure..feature",
+			  "src/test/resources/Feature/DataStructure.feature",
 			  "src/test/resources/Feature/Graph.feature",
 			  "src/test/resources/Feature/In_Signin.feature",
 			  "src/test/resources/Feature/In_register.feature",
