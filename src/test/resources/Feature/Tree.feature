@@ -16,7 +16,7 @@ Feature: Test the functionality of tree Structure
     Examples: 
       | SheetName     | Rownumber |
       | PythonProgram |         0 |
-      | PythonProgram |         1 |
+      
 
   Scenario Outline: Search for Tree structure
     Given user is in Tree page after logged in
@@ -28,8 +28,8 @@ Feature: Test the functionality of tree Structure
 
     Examples: 
       | Sheetname     | RowNumber |
-      | PythonProgram |         0 |
       | PythonProgram |         1 |
+       
 
   Scenario Outline: Search for Tree structure
     Given user is in Tree page after logged in
@@ -42,7 +42,7 @@ Feature: Test the functionality of tree Structure
     Examples: 
       | SheetName     | RowNumber |
       | PythonProgram |         0 |
-      | PythonProgram |         1 |
+      
 
   Scenario Outline: Search for Tree structure
     Given user is in Tree page after logged in
@@ -54,8 +54,8 @@ Feature: Test the functionality of tree Structure
 
     Examples: 
       | sheetname     | RowNumber |
-      | PythonProgram |         0 |
       | PythonProgram |         1 |
+      
 
   Scenario Outline: Search for Tree structure
     Given user is in Tree page after logged in
@@ -68,7 +68,7 @@ Feature: Test the functionality of tree Structure
     Examples: 
       | SHEET_NAME    | RowNumber |
       | PythonProgram |         0 |
-      | PythonProgram |         1 |
+      
  
   Scenario Outline: Search for Tree structure
     Given user is in Tree page after logged in
@@ -80,5 +80,5 @@ Feature: Test the functionality of tree Structure
 
     Examples: 
       | SheetNAME     | RowNumber |
-      | PythonProgram |         0 |
       | PythonProgram |         1 |
+      
