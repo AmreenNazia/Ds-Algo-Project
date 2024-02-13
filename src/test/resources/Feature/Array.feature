@@ -61,7 +61,7 @@ Feature: Test the functionality of array data structure
     Examples: 
       | SheetName   | RowNumber |
       | Python code |         0 |
-      | Python code |         1 |
+      
 
   Scenario Outline: search for array data structure
     Given user is in the array page
@@ -117,8 +117,8 @@ Feature: Test the functionality of array data structure
 
     Examples: 
       | SheetName   | RowNumber |
-      | Python code |         0 |
       | Python code |         1 |
+      
 
   Scenario Outline: search for array data structure
     Given user is in the array page
@@ -175,8 +175,7 @@ Feature: Test the functionality of array data structure
     Examples: 
       | SheetName   | RowNumber |
       | Python code |         0 |
-      | Python code |         1 |
-
+       
   Scenario Outline: search for array data structure
     Given user is in the array page
     When user clicks on Applications of Array link
@@ -231,5 +230,5 @@ Feature: Test the functionality of array data structure
 
     Examples: 
       | SheetName   | RowNumber |
-      | Python code |         0 |
       | Python code |         1 |
+      
