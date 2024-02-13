@@ -17,8 +17,7 @@ Feature: validate the Numbyninja fields
 	 Examples: 
       | Sheet_Name     | Row_number |
       | PythonProgram |         0 |
-      | PythonProgram |         1 |
-
+      
 
   Scenario Outline: validate the Numbyninja fields
     Given user select graph from the drop down
@@ -31,4 +30,4 @@ Feature: validate the Numbyninja fields
  Examples: 
       | Sheet_name     | row_number |
       | PythonProgram |         0 |
-      | PythonProgram |         1 |
+ 
