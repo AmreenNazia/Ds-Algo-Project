@@ -18,8 +18,7 @@ Feature: To test the functionality of LinkedList
     Examples: 
       | Sheetname   | Rownumber |
       | Python code |         0 |
-      | Python code |  				1	|
-
+      
 
   Scenario Outline: Search for LinkedList structure
     Given user is in Linkedlist page after loggedin
@@ -32,8 +31,8 @@ Feature: To test the functionality of LinkedList
 
     Examples: 
       | Sheetname   | Rownumber |
-      | Python code |         0 |
       | Python code |         1 |
+      
 
   Scenario Outline: Search for LinkedList structure
     Given user is in Linkedlist page after loggedin
@@ -47,7 +46,7 @@ Feature: To test the functionality of LinkedList
     Examples: 
       | Sheetname   | Rownumber |
       | Python code |         0 |
-      | Python code |         1 |
+      
 
   Scenario Outline: Search for LinkedList structure
     Given user is in Linkedlist page after loggedin
@@ -60,8 +59,8 @@ Feature: To test the functionality of LinkedList
 
     Examples: 
       | Sheetname   | Rownumber |
-      | Python code |         0 |
       | Python code |         1 |
+     
 
   Scenario Outline: Search for LinkedList structure
     Given user is in Linkedlist page after loggedin
@@ -75,7 +74,7 @@ Feature: To test the functionality of LinkedList
     Examples: 
       | Sheetname   | Rownumber |
       | Python code |         0 |
-      | Python code |         1 |
+       
 
   Scenario Outline: Search for LinkedList structure
     Given user is in Linkedlist page after loggedin
@@ -88,9 +87,8 @@ Feature: To test the functionality of LinkedList
 
     Examples: 
       | Sheetname   | Rownumber |
-      | Python code |         0 |
       | Python code |         1 |
-
+      
   Scenario Outline: Search for LinkedList structure
     Given user is in Linkedlist page after loggedin
     When user clicks on Deletion
@@ -103,4 +101,4 @@ Feature: To test the functionality of LinkedList
     Examples: 
       | Sheetname   | Rownumber |
       | Python code |         0 |
-      | Python code |         1 |
+      
