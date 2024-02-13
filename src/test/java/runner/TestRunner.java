@@ -10,7 +10,16 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import utility.ConfigReader;
  
-@CucumberOptions(features={"src/test/resources/Feature"},
+@CucumberOptions(features={"src/test/resources/Feature/Array.feature",
+			  "src/test/resources/Feature/DataStructure..feature",
+			  "src/test/resources/Feature/Graph.feature",
+			  "src/test/resources/Feature/In_Signin.feature",
+			  "src/test/resources/Feature/In_register.feature",
+			   "src/test/resources/Feature/Linked_List.feature",
+			  "src/test/resources/Feature/Queue.feature",
+			  "src/test/resources/Feature/Register.feature",
+			  "src/test/resources/Feature/Signin.feature",
+			  "src/test/resources/Feature/stack.feature"},
 		  glue = {"StepDefinition","AppHooks"},
 monochrome = true,
 plugin = {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
