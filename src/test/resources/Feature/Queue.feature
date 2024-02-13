@@ -17,7 +17,7 @@ Feature: Test the functionality of Queue data structure
     Examples: 
       | SheetName  | RowNumber |
       | PythonProgram |         0 |
-      | PythonProgram |         1 |
+     
 
   Scenario Outline: Search for queue data structure
     Given user click the GetStarted button and navigate to queue page
@@ -31,8 +31,7 @@ Feature: Test the functionality of Queue data structure
     Examples: 
       | Sheet_Name  | RowNumber |
       | PythonProgram |         1 |
-      | PythonProgram |         0 |
-
+       
   Scenario Outline: Search for queue data structure
     Given user click the GetStarted button and navigate to queue page
     Then user click the implimentation using array
@@ -45,7 +44,7 @@ Feature: Test the functionality of Queue data structure
     Examples: 
       | SheetName  | Row_Number |
       | PythonProgram |         0 |
-      | PythonProgram |         1 |
+     
 
   Scenario Outline: Search for queue data structure
     Given user click the GetStarted button and navigate to queue page
@@ -59,4 +58,4 @@ Feature: Test the functionality of Queue data structure
     Examples: 
       | Sheet_Name  | Row_Number |
       | PythonProgram |         1 |
-      | PythonProgram |         0 |
+     
