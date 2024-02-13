@@ -11,5 +11,5 @@ Feature: To test the functionality of Register link
     
     Examples: 
       | username   | password  | confirm_password |
-      | David507 | Scott@1203  | Scott@1203        |
+      | David@507 | Scott@120  | Scott@120        |
  
