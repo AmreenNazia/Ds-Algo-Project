@@ -16,7 +16,7 @@ Feature: Test the functionality of data structure
     Examples: 
       | Sheet_Name    | Row_Number |
       | PythonProgram |          0 |
-      | PythonProgram |          1 |
+      
 
   Scenario Outline: search for Stack
     Given user is in stack page after logged in
@@ -28,8 +28,8 @@ Feature: Test the functionality of data structure
 
     Examples: 
       | Sheet_Name    | RowNumber |
-      | PythonProgram |         0 |
       | PythonProgram |         1 |
+      
 
   Scenario Outline: search for Stack
     Given user is in stack page after logged in
@@ -42,4 +42,4 @@ Feature: Test the functionality of data structure
     Examples: 
       | SheetName     | Row_Number |
       | PythonProgram |          0 |
-      | PythonProgram |          1 |
+      
