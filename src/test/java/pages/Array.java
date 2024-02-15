@@ -37,6 +37,8 @@ public class Array
 	private By practice_run_button = By.xpath("//button[text()='Run']");
 	private By practice_submit_button = By.xpath("//input[@class='button']");
 	private By practice_output = By.xpath("//pre[@id='output']/..");
+	private By try_here = By.xpath("//a[text()='Try here>>>']");
+	private By text_area = By.xpath("//*[@id=\"answer_form\"]/div/div/div[6]/div[1]/div/div/div/div[4]");
 
 	public Array(WebDriver driver)
 	{
@@ -65,13 +67,15 @@ public class Array
 	}
 	public void try_here_button()
 	{	
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		 
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 		Actions action = new Actions(driver);
 		WebElement try_button = driver.findElement(By.xpath("//a[text()='Try here>>>']"));
 		action.moveToElement(try_button).click().perform();
 	}
 	public void text_editor(String text)
 	{
+		 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 		Actions action = new Actions(driver);
 		WebElement text_area = driver.findElement(By.xpath("//*[@id=\"answer_form\"]/div/div/div[6]/div[1]/div/div/div/div[4]"));
@@ -113,7 +117,7 @@ public class Array
 	{
 	 
 		driver.findElement(run_button).click();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		try
 		{
 			Alert alert = wait.until(ExpectedConditions.alertIsPresent());
@@ -158,9 +162,9 @@ public class Array
 
 	public void practice_run()
 	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 		driver.findElement(practice_run_button).click();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		try
 		{
 			Alert alert = wait.until(ExpectedConditions.alertIsPresent());
@@ -177,7 +181,7 @@ public class Array
 	public void practice_submit() throws InterruptedException
 	{
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 		driver.findElement(practice_submit_button).sendKeys(Keys.RETURN);
 		Thread.sleep(1000);
 
@@ -273,7 +277,7 @@ public class Array
 	{
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 		driver.navigate().back();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 		driver.findElement(signout_button).click();
 	}
 }

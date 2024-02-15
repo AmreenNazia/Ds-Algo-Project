@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,6 +30,9 @@ public class Linked_List
 	private By traversal = By.xpath("//a[@href='traversal']");
 	private By insertion = By.xpath("//a[@href='insertion-in-linked-list']");
 	private By deletion = By.xpath("//a[@href='deletion-in-linked-list']");
+	private By signin_link = By.xpath("//a[@href='/login']");
+	private By sign_username = By.id("id_username");
+	private By sign_password = By.id("id_password");
 
 	private By llist_signout = By.xpath("//a[text()='Sign out']");
 
@@ -36,10 +40,39 @@ public class Linked_List
 	{	
 		this.driver = driver;
 	}
-	public void credential_login_button()
-	{	
+	public void Getstarted() throws InterruptedException {
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+		Actions action = new Actions(driver);
+		 JavascriptExecutor js	 = (JavascriptExecutor) driver;
+		 WebElement first_item = new WebDriverWait(driver,Duration.ofSeconds(6)).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Get Started']")));
+			js.executeScript("arguments[0].scrollIntoView(true);", first_item);
+			action.moveToElement(first_item).click().perform();
 		 
-		driver.findElement(login_button).click();
+ 
+	 
+	}		
+	public void signin() throws InterruptedException
+	{
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+		driver.findElement(signin_link).click();
+
+		 
+	}
+	
+	public void Username_and_password() {
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+		driver.findElement(sign_username).sendKeys("Testadmin");
+		driver.findElement( sign_password).sendKeys("Ninja@567");
+	}
+	public void credential_login_button() throws InterruptedException
+	{	
+		Actions action = new Actions(driver);
+		 
+		WebElement try_button = driver.findElement( By.xpath("//input[@type='submit']"));
+		
+		action.moveToElement(try_button).click().perform();
+//		driver.findElement(login_button).click();
 	}
 	public void linkedlist_started()
 	{

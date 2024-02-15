@@ -16,6 +16,7 @@ public class stack_Functionality {
 	private stack st = new stack(BaseTest.getDriver());
 	@Given("user is in stack page after logged in")
 	public void user_is_in_stack_page_after_logged_in() {
+		
 	    st.Getstarted_btn_stack();
 	}
 
@@ -46,7 +47,7 @@ public class stack_Functionality {
 	@Then("user clicks out_put")
 	public void user_clicks_out_put() {
 	    st.output();
-	    st.signout();
+	    
 	}
 
 	@When("user clicks on Implementation of stack")

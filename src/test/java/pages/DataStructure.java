@@ -4,7 +4,10 @@ import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-	import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -34,8 +37,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 	public void GetStarted_Main() {
-
-	driver.findElement(Getstarted_btn_main).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+		Actions action = new Actions(driver);
+		 JavascriptExecutor js	 = (JavascriptExecutor) driver;
+		 WebElement first_item = new WebDriverWait(driver,Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Get Started']")));
+			js.executeScript("arguments[0].scrollIntoView(true);", first_item);
+			action.moveToElement(first_item).click().perform();
+//	driver.findElement(Getstarted_btn_main).click();
 	}
 
 	public void  signin() throws InterruptedException
@@ -72,12 +80,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 	}
 	public void Text_Area() {
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 	driver.findElement(click_Textarea).click();
 
 	}
 	public void fillTextArea(String text)   {
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));  
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));  
 	driver.findElement(click_Textarea).sendKeys(text);
 
 	}

@@ -1,7 +1,10 @@
 package AppHooks;
 
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
  
@@ -25,6 +28,7 @@ import org.openqa.selenium.WebDriver;
 
 import Driverfactory.BaseTest;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 
 import io.cucumber.java.Scenario;
@@ -34,9 +38,9 @@ import utility.ConfigReader;
 
 public class ApplicationHooks {
 
-	private static  BaseTest basetest;
-	private   WebDriver driver;
-	private static ConfigReader configReader;
+	private   BaseTest basetest;
+	private static    WebDriver driver;
+	private  ConfigReader configReader;
 	static Properties prop;
 
 
@@ -64,14 +68,15 @@ public class ApplicationHooks {
 
 
 	 
-	@AfterMethod  
-	@After(order = 0)
-	public void quitBrowser() {
+	 
+	public static  void quitBrowser() {
 
-		driver.quit();
+		 
+			driver.quit();
+		 
 	}
 
-	@AfterTest 
+	@AfterTest
 	@After(order = 1)
 	public void tearDown(Scenario scenario) throws IOException {
 		if(scenario.isFailed()) {

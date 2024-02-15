@@ -27,6 +27,7 @@ public class ConfigReader {
 		else
 			throw new RuntimeException("browser not specified in the testng.xml");
 	}
+	
 }
 
 	 

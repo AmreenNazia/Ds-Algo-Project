@@ -17,6 +17,7 @@ public class DataStructure_Functionality {
 	
 	@Given("user navigates to login_page")
 	public void user_navigates_to_login_page() throws InterruptedException {
+		Thread.sleep(1000);
 	    ds.GetStarted_Main();
 	    ds.signin();
 	}

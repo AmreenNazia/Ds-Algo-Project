@@ -1,10 +1,14 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
-
-
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 
@@ -25,9 +29,12 @@ public  class RegisterPage   {
 	public RegisterPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	public void Getstarted() {
-
-		driver.findElement(Getstarted_btn).click();
+	public void Getstarted() throws InterruptedException {
+		Actions action = new Actions(driver);
+		 JavascriptExecutor js	 = (JavascriptExecutor) driver;
+		 WebElement first_item = new WebDriverWait(driver,Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Get Started']")));
+			js.executeScript("arguments[0].scrollIntoView(true);", first_item);
+			action.moveToElement(first_item).click().perform();
 	}
 	public void Register_link() {
 

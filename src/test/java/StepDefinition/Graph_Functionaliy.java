@@ -16,7 +16,8 @@ public class Graph_Functionaliy {
 	private GraphPage gp = new GraphPage(BaseTest.getDriver());
 
 	@Given("user clicks the main getstarted button")
-	public void user_clicks_the_main_getstarted_button() {
+	public void user_clicks_the_main_getstarted_button() throws InterruptedException {
+		Thread.sleep(1000);
 	     gp.startpage();
 	}
 

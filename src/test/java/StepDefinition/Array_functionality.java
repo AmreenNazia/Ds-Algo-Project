@@ -53,7 +53,7 @@ public void user_clicks_on_search_the_array_link_and_enters_the_python_code_with
 	ArrayList<String> list = new ArrayList<String>();
 	if(SheetName.equals("Python Array"))
 	{
-		Thread.sleep(1000); 
+		 
 		List<Map<String,String>>testData = er.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), SheetName);
 		 
 		for(int i = 0 ; i < testData.size() ; i++)
@@ -61,7 +61,7 @@ public void user_clicks_on_search_the_array_link_and_enters_the_python_code_with
 			String text = testData.get(i).get("Array program");
 			list.add(text);	   
 		}
-		Thread.sleep(1000);
+		 
 
 	}	
 	arr.search_the_array(list);		
@@ -69,11 +69,11 @@ public void user_clicks_on_search_the_array_link_and_enters_the_python_code_with
 
 @Then("user clicks on run button and checks the output and clicks submit")
 public void user_clicks_on_run_button_and_checks_the_output_and_clicks_submit() throws InterruptedException {
-	Thread.sleep(2000);
+	Thread.sleep(500); 
 	arr.practice_run();
-	Thread.sleep(1000);
+//	Thread.sleep(1000);
 	arr.practice_submit();
-//	Thread.sleep(2000);
+//	Thread.sleep(1000);
 	arr.signout();
 }
 
@@ -84,13 +84,13 @@ public void user_clicks_on_max_consecutive_ones_and_enters_the_python_code_with_
 	{
 		 
 		List<Map<String,String>>testData = er.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), SheetName);	
-		Thread.sleep(1000);
+		 
 		for(int i = 0 ; i < testData.size() ; i++)
 		{
 			String text = testData.get(i).get("Array program");
 			list.add(text);	   
 		}
-		Thread.sleep(1000);
+		 
 	}
 	arr.max_consecutive_ones(list);
 }
@@ -102,13 +102,13 @@ public void user_clicks_on_even_number_of_digits_and_enters_the_python_code_with
 	{
 		 
 		List<Map<String,String>>testData = er.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), SheetName);
-		Thread.sleep(1000);
+		 
 		for(int i = 0 ; i < testData.size() ; i++)
 		{
 			String text = testData.get(i).get("Array program");
 			list.add(text);	   
 		}
-		Thread.sleep(1000);
+		 
 	}
 	arr.even_number_of_digits(list);
 }
@@ -120,13 +120,13 @@ public void user_clicks_on_squares_of_sorted_array_and_user_enters_the_python_co
 	{
 		 
 		List<Map<String,String>>testData = er.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx") , SheetName);	
-		Thread.sleep(1000);
+		 
 		for(int i = 0 ; i < testData.size() ; i++)
 		{
 			String text = testData.get(i).get("Array program");
 			list.add(text);	   
 		}
-		Thread.sleep(1000);
+	 
 	}
 	arr.squares_of_sorted_array(list);
 }
@@ -141,7 +141,7 @@ public void user_is_in_texteditor_and_user_enters_the_python_code_with_and_row_n
 	 
 	List<Map<String,String>>testData = er.getData((System.getProperty("user.dir")+"/src/test/java/utility/python1.xlsx"), SheetName);	
 	String text = testData.get(RowNumber).get("Code");
-	Thread.sleep(4000);
+	 
 	arr.text_editor(text);
 }
 @When("user clicks on run to check the output")
@@ -151,7 +151,7 @@ public void user_clicks_on_run_to_check_the_output() {
 
 @Then("user clicks on signout")
 public void user_clicks_on_signout() throws InterruptedException {
-	Thread.sleep(2000);
+	 
 	arr.signout();
 }
 

@@ -18,7 +18,7 @@ public class In_Signin_Functionality extends BaseTest {
 	private RegisterPage rp = new RegisterPage(BaseTest.getDriver());
 	
 	@Given("user in the signin page")
-	public void user_in_the_signin_page() {
+	public void user_in_the_signin_page() throws InterruptedException {
 	     rp.Getstarted();
 	     si.signin();
 	     

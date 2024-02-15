@@ -9,7 +9,7 @@ public class Register_Functionality {
 	private RegisterPage register = new RegisterPage(BaseTest.getDriver());
 	
 	@Given("user is in Register page")
-	public void user_is_in_register_page() {
+	public void user_is_in_register_page() throws InterruptedException {
 	    register.Getstarted();
 	}
 

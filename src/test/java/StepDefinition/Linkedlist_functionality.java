@@ -27,10 +27,12 @@ public class Linkedlist_functionality extends BaseTest {
 	ExcelReader reader = new ExcelReader();
 	
 	@Given("user enters login page")
-	public void user_enters_login_page() {
+	public void user_enters_login_page() throws InterruptedException {
+		Thread.sleep(1000);
+		ll.Getstarted();
+		ll.signin();
 		
-		register.Getstarted();
-		si.signin();
+		 
 	     
 	}
 
@@ -44,7 +46,7 @@ public class Linkedlist_functionality extends BaseTest {
 	}
 
 	@Then("user navigate to home_page")
-	public void user_navigate_to_home_page() {
+	public void user_navigate_to_home_page() throws InterruptedException {
 		ll.credential_login_button();
 	}
 
